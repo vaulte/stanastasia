@@ -712,3 +712,29 @@ body{
     margin:0 5px;
 
 }
+
+
+/*=====================================
+    RESPONSIVE
+======================================*/
+
+@media(max-width:900px){
+
+.mail-application{
+
+    grid-template-columns:180px 1fr;
+
+}
+
+.message{
+
+    grid-template-columns:
+
+        20px
+        130px
+        1fr
+        70px;
+
+}
+
+}

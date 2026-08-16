@@ -1,382 +1,595 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Forum — Ravenswood University</title>
-<link rel="stylesheet" href="./css/desktop.css">
-<link rel="stylesheet" href="./css/browser.css">
-<link rel="stylesheet" href="./css/forum.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ravenswood University Campus Forum</title>
+
+  <link rel="stylesheet" href="./css/desktop.css">
+  <link rel="stylesheet" href="./css/browser.css">
+  <link rel="stylesheet" href="./css/forum.css">
 </head>
+
 <body>
-<div class="desktop">
-  <div class="browser">
-    <div class="tabs">
-      <div class="tab active">
-        <div class="icon" style="background:#ff6600"></div>
-        <span>Ravenswood Student Forum</span>
-        <span class="close">✕</span>
+  <div class="desktop">
+    <div class="browser">
+
+      <div class="tabs">
+        <div class="tab active">
+          <div class="icon" style="background:#ff6600"></div>
+          <span>Campus Forum</span>
+          <span class="close">✕</span>
+        </div>
+        <div class="new-tab">
+          <a href="./index.html" title="New Tab">+</a>
+        </div>
       </div>
-      <div class="new-tab"><a href="./index.html" title="New Tab">+</a></div>
+
+      <div class="toolbar">
+        <button class="navbtn" type="button" onclick="history.back()" title="Back">‹</button>
+        <button class="navbtn" type="button" onclick="history.forward()" title="Forward">›</button>
+        <button class="navbtn" type="button" onclick="location.reload()" title="Refresh">↻</button>
+        <div class="addressbar">http://forum.ravenswood.edu/thread.php?id=31415</div>
+      </div>
+
+      <div class="viewport">
+        <div class="forum-page">
+
+
+<!-- =====================================================
+     UNIVERSITY FORUM HEADER
+====================================================== -->
+
+<header class="forum-header">
+
+    <div class="forum-brand">
+
+        <div class="forum-crest">
+
+            RU
+
+        </div>
+
+        <div>
+
+            <h1>
+                Ravenswood University
+            </h1>
+
+            <p>
+                Campus Discussion Forum
+            </p>
+
+        </div>
+
     </div>
-    <div class="toolbar">
-      <button class="navbtn" type="button" onclick="history.back()" title="Back">‹</button>
-      <button class="navbtn" type="button" onclick="history.forward()" title="Forward">›</button>
-      <button class="navbtn" type="button" onclick="location.reload()" title="Refresh">↻</button>
-      <div class="addressbar">https://forum.ravenswood.edu/</div>
+
+
+    <div class="forum-header-links">
+
+        <a href="./index.html">
+            University Home
+        </a>
+
+        <span>|</span>
+
+        <a href="./repository.html">
+            Repository
+        </a>
+
+        <span>|</span>
+
+        <a href="#">
+            Help
+        </a>
+
     </div>
-    <div class="viewport">
-      <header class="uni-header">
 
-            <div class="logo">
+</header>
 
-              <div class="crest"></div>
 
-            <div>
+<!-- =====================================================
+     FORUM NAVIGATION
+====================================================== -->
 
-      <h1>Ravenswood University</h1>
+<nav class="forum-nav">
 
-      <p>Digital Repository & Special Collections</p>
+    <a href="#">Forum Home</a>
 
-              </div>
+    <a href="#">Search</a>
 
-            </div>
+    <a href="#">Members</a>
 
-          </header>
-          
-          <nav class="breadcrumbs">
+    <a href="#">User CP</a>
 
-<a href="./repository.html">Repository</a>
+    <a href="#">FAQ</a>
 
-<span>&gt;</span>
+    <span class="nav-spacer"></span>
 
-<a href="./repository.html">Research Papers</a>
-
-<span>&gt;</span>
-
-<a href="./repository.html">Department of Botany</a>
-
-<span>&gt;</span>
-
-<span class="current">
-
-Infernal Flora in Temperate Wetlands
-
-</span>
+    <span>
+        Logged in as:
+        <strong>Guest</strong>
+    </span>
 
 </nav>
 
-<section class="article-header">
 
-<h1>
+<!-- =====================================================
+     BREADCRUMBS
+====================================================== -->
 
-Infernal Flora in Temperate Wetlands
+<div class="forum-breadcrumbs">
 
-</h1>
+    <a href="#">Campus Forum</a>
 
-<div class="authors">
+    <span>›</span>
 
-Margaret Hale
+    <a href="#">General Discussion</a>
 
-•
+    <span>›</span>
 
-Department of Botany
-
-•
-
-1978
-
-</div>
-
-<div class="badges">
-
-<span class="badge">
-
-Peer Reviewed
-
-</span>
-
-<span class="badge">
-
-Research Paper
-
-</span>
-
-<span class="badge restricted">
-
-Restricted Collection
-
-</span>
+    <span>
+        Creature in Galveston Bay, Texas?
+    </span>
 
 </div>
 
-</section>
 
-<section class="record-toolbar">
+<!-- =====================================================
+     THREAD HEADER
+====================================================== -->
 
-<button>📄 PDF</button>
+<div class="thread-header">
 
-<button>🖨 Print</button>
+    <div>
 
-<button>⬇ Download</button>
+        <h2>
+            Creature in Galveston Bay, Texas?
+        </h2>
 
-<button>🔖 Bookmark</button>
+        <p>
+            Discussion regarding recent reports from
+            the Texas coastal region
+        </p>
 
-<button>✉ Email</button>
+    </div>
 
-<button>Cite</button>
+    <div class="thread-actions">
 
-</section>
+        <button>
+            Reply
+        </button>
 
-<div class="record-layout">
+        <button>
+            Thread Tools
+        </button>
 
-<main class="article-main">
-
-<section class="panel">
-
-<h2>Abstract</h2>
-
-<p>
-
-This paper documents the discovery and
-classification of several unidentified
-wetland flowering species recovered from
-isolated marshes throughout northern
-Ohio between 1972 and 1977.
-
-Although superficially similar to native
-aquatic flora, microscopic examination
-revealed numerous anatomical structures
-not presently recognised within any
-known terrestrial taxonomy.
-
-Continued observation suggests the
-specimens exhibit accelerated growth
-following prolonged exposure to ritual
-sites associated with historical
-occult activity.
-
-</p>
-
-</section>
-
-<section class="metadata">
-
-<h2>Metadata</h2>
-
-<table>
-
-<tr>
-<td>Repository ID</td>
-<td>RU-BOT-1978-0148</td>
-</tr>
-
-<tr>
-<td>Published</td>
-<td>1978</td>
-</tr>
-
-<tr>
-<td>Department</td>
-<td>Botany</td>
-</tr>
-
-<tr>
-<td>Language</td>
-<td>English</td>
-</tr>
-
-<tr>
-<td>Pages</td>
-<td>243</td>
-</tr>
-
-<tr>
-<td>Collection</td>
-<td>Biological Anomalies</td>
-</tr>
-
-<tr>
-<td>Physical Copy</td>
-<td>Restricted Stacks</td>
-</tr>
-
-<tr>
-<td>Keywords</td>
-<td>
-
-flora,
-wetlands,
-mycology,
-ritual ecology
-
-</td>
-</tr>
-
-</table>
-
-</section>
-
-<section class="panel">
-
-<h2>Related Works</h2>
-
-<div class="related-paper">
-
-<h3>
-
-Observed Behaviour of
-Class II Mimetic Organisms
-
-</h3>
-
-<p>
-
-Department of Zoology
-
-1986
-
-</p>
+    </div>
 
 </div>
 
-<div class="related-paper">
 
-<h3>
+<!-- =====================================================
+     THREAD
+====================================================== -->
 
-Growth Characteristics of
-Hellflora
+<div class="thread">
 
-</h3>
 
-<p>
+<!-- ================= POST 1 ================= -->
 
-1981
+<article class="post">
 
-</p>
+
+    <div class="post-top">
+
+        <span>
+            20XX-10-12, 11:40PM
+        </span>
+
+        <span>
+            #1
+        </span>
+
+    </div>
+
+
+    <div class="post-body">
+
+
+        <!-- PROFILE -->
+
+        <aside class="profile">
+
+            <div class="avatar avatar-red"></div>
+
+            <div class="username">
+                User#0024
+            </div>
+
+            <div class="usertitle">
+                Getting BF on Camera
+            </div>
+
+            <div class="rank">
+                Senior Member
+            </div>
+
+
+            <div class="profile-info">
+
+                <div>
+                    Posts: 1,284
+                </div>
+
+                <div>
+                    Joined: 2003
+                </div>
+
+                <div>
+                    Location: Unknown
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- POST CONTENT -->
+
+        <main class="content">
+
+            <h3>
+                Creature in Galveston Bay, Texas?
+            </h3>
+
+
+            <div class="content-inner">
+
+
+                <div class="embed">
+
+                    <div class="embed-thumb"></div>
+
+                    <div>
+
+                        <div class="embed-title">
+
+                            Bad Tidings:
+                            “Fishery Wrecked By Strange Creature”
+
+                        </div>
+
+                        <div class="embed-description">
+
+                            West Bay fishery vandalized,
+                            suspect unidentifiable –
+                            inhuman?
+
+                        </div>
+
+                        <div class="embed-url">
+
+                            galvnews.com
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <p>
+
+                    Check out the CCTV footage, people.
+                    8ft tall by my estimates but it’s too
+                    grainy and dark for a good answer.
+                    Any guesses as to what our southern
+                    gillman could be?
+
+                </p>
+
+
+                <div class="signature">
+
+                    — “Truth survives compression artifacts.”
+
+                </div>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+</article>
+
+
+<!-- ================= POST 2 ================= -->
+
+<article class="post">
+
+    <div class="post-top">
+
+        <span>
+            20XX-10-13, 8:27AM
+        </span>
+
+        <span>
+            #4
+        </span>
+
+    </div>
+
+
+    <div class="post-body">
+
+
+        <aside class="profile">
+
+            <div class="avatar avatar-blue"></div>
+
+            <div class="username">
+                User#0391
+            </div>
+
+            <div class="usertitle">
+                Bogman
+            </div>
+
+            <div class="rank new-member">
+                New Member
+            </div>
+
+
+            <div class="profile-info">
+
+                <div>
+                    Posts: 14
+                </div>
+
+                <div>
+                    Joined: 20XX
+                </div>
+
+                    <div>
+                    Location: Texas City
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <main class="content">
+
+            <h3>
+                Re: Creature in Galveston Bay, Texas?
+            </h3>
+
+
+            <div class="content-inner">
+
+                <p>
+
+                    I’m from Texas City which is pretty
+                    close to the incident. A lot of folks
+                    are saying that it’s
+                    <span class="redacted">
+                        delusions of grandeur
+                    </span>,
+                    it’s a well-known legend around
+                    these parts.
+
+                </p>
+
+
+                <div class="quote">
+
+                    <div class="quote-header">
+
+                        Originally posted by User#0024
+
+                    </div>
+
+                    <p>
+
+                        “8ft tall by my estimates…”
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</article>
+
+
+<!-- ================= POST 3 ================= -->
+
+<article class="post">
+
+    <div class="post-top">
+
+        <span>
+            20XX-10-15, 4:16PM
+        </span>
+
+        <span>
+            #13
+        </span>
+
+    </div>
+
+
+    <div class="post-body">
+
+
+        <aside class="profile">
+
+            <div class="avatar avatar-orange"></div>
+
+            <div class="username">
+                User#0718
+            </div>
+
+            <div class="usertitle">
+                Occasional Poster
+            </div>
+
+            <div class="rank member">
+                Member
+            </div>
+
+
+            <div class="profile-info">
+
+                <div>
+                    Posts: 87
+                </div>
+
+                <div>
+                    Joined: 2007
+                </div>
+
+                <div>
+                    Location: —
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <main class="content">
+
+            <h3>
+                Re: Creature in Galveston Bay, Texas?
+            </h3>
+
+
+            <div class="content-inner">
+
+                <p>
+
+                    Huh. Looks like a
+
+                    <span class="mystery">
+
+                        mystery to me.
+
+                    </span>
+
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+</article>
+
 
 </div>
 
-<div class="related-paper restricted">
 
-<h3>
+<!-- =====================================================
+     THREAD FOOTER
+====================================================== -->
 
-Lexicon Recentis
+<div class="thread-footer">
 
-</h3>
+    <div>
 
-<p>
+        <strong>
+            Users browsing this thread:
+        </strong>
 
-Restricted Access
+        14
+        (3 members and 11 guests)
 
-</p>
+    </div>
 
-</div>
+    <div class="small">
 
-</section>
+        Powered by vBulletin® Version 3.6.7
 
-</main>
+        —
 
-<aside class="article-sidebar">
+        All times are GMT-6.
 
-<section class="download-box">
-
-<h2>Repository Record</h2>
-
-<table>
-
-<tr>
-
-<td>Views</td>
-
-<td>2,914</td>
-
-</tr>
-
-<tr>
-
-<td>Downloads</td>
-
-<td>237</td>
-
-</tr>
-
-<tr>
-
-<td>Status</td>
-
-<td>Available</td>
-
-</tr>
-
-<tr>
-
-<td>Format</td>
-
-<td>PDF</td>
-
-</tr>
-
-</table>
-
-</section>
-
-<section class="preview">
-
-<div class="preview-page">
-
-<div class="fake-paper">
-
-<h2>
-
-Infernal Flora
-in Temperate Wetlands
-
-</h2>
-
-<hr>
-
-<p>
-
-Margaret Hale
-
-Department of Botany
-
-1978
-
-</p>
-
-<p>
-
-ABSTRACT
-
-Lorem ipsum dolor sit amet...
-
-</p>
+    </div>
 
 </div>
 
-</div>
 
-</section>
+<!-- =====================================================
+     UNIVERSITY FOOTER
+====================================================== -->
 
-</aside>
+<footer class="forum-footer">
 
-</div>
+    <div>
 
-<footer>
+        <strong>
+            Ravenswood University
+        </strong>
 
-Ravenswood University Library Repository
+        &nbsp;|&nbsp;
 
-Version 4.1
+        Campus Information Services
 
-© 1998–2008
+    </div>
+
+    <div>
+
+        <a href="#">
+            Privacy
+        </a>
+
+        |
+
+        <a href="#">
+            Terms of Use
+        </a>
+
+        |
+
+        <a href="#">
+            Accessibility
+        </a>
+
+        |
+
+        <a href="#">
+            Contact
+
+        </a>
+
+    </div>
+
+    <div class="copyright">
+
+        Copyright © 2001–2008 Ravenswood University
+
+    </div>
 
 </footer>
+
+
+</div>
+      </div>
+
     </div>
   </div>
-</div>
-<script src="./js/main.js"></script>
-<script src="./js/forum.js"></script>
+
+  <script src="./js/main.js"></script>
+  <script src="./js/forum.js"></script>
 </body>
 </html>

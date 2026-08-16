@@ -1,704 +1,844 @@
-/* Ravenswood Student Forum — page-specific styles */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-/* Desktop shell */
-/* Browser window */
-/* Tabs */
-.tab .icon{
-  width:16px;
-  height:16px;
-  background:#ff6600;
-  border-radius:2px;
-}
-
-.tab .close{
-  margin-left:auto;
-  font-weight:bold;
-  color:#333;
-}
-
-/* Toolbar */
-/* Page viewport */
-/* Forum page */
-.forum{
-  width:1120px;
-  margin:0 auto;
-  background:#fff;
-  border:1px solid #444;
-  box-shadow:0 2px 6px rgba(0,0,0,.08);
-}
-
+/* Ravenswood University Campus Forum — page-specific CSS */
 /*================================================
 
-    RAVENSWOOD UNIVERSITY REPOSITORY
-    ARTICLE PAGE
+    RAVENSWOOD UNIVERSITY
+    CAMPUS FORUM
 
 ================================================*/
 
 
-/*-------------------------
-    FOOTER
---------------------------*/
+/*====================================
+    FORUM PAGE
+=====================================*/
 
-footer{
+.forum-page{
 
-    margin-top:40px;
+    width:1120px;
 
-    padding:14px;
+    margin:0 auto;
 
-    font-size:12px;
+    background:#f7f7f7;
 
-    color:#666;
+    border-left:1px solid #aaa;
 
-    border-top:1px solid #d4d4d4;
-
-}
-
-
-
-/*==============================
-    PAGE CONTAINER
-===============================*/
-
-.repository{
-
-    display:grid;
-
-    grid-template-columns:240px 1fr;
+    border-right:1px solid #aaa;
 
     min-height:100%;
 
 }
 
 
-/*==============================
-    SIDEBAR
-===============================*/
-
-.repository aside{
-
-    background:#f3f3f3;
-
-    border-right:1px solid #c6c6c6;
-
-    padding:25px;
-
-}
-
-
-.repository aside h2{
-
-    font-size:14px;
-
-    color:#555;
-
-    margin-bottom:10px;
-
-    text-transform:uppercase;
-
-    letter-spacing:1px;
-
-}
-
-
-.repository aside ul{
-
-    margin-bottom:30px;
-
-}
-
-
-.repository aside li{
-
-    padding:6px 4px;
-
-    cursor:pointer;
-
-    transition:.15s;
-
-}
-
-
-.repository aside li:hover{
-
-    background:#dfe8f7;
-
-}
-
-
-/*==============================
-    CONTENT
-===============================*/
-
-.repository main{
-
-    padding:30px;
-
-    background:#fafafa;
-
-}
-
-
-/*==============================
+/*====================================
     UNIVERSITY HEADER
-===============================*/
+=====================================*/
 
-.uni-header{
+.forum-header{
+
+    min-height:90px;
 
     background:
 
         linear-gradient(
-
-            #f6f6f6,
-            #d9d9d9
-
+            #f8f8f8,
+            #dedede
         );
 
-    border-bottom:1px solid #9a9a9a;
+    border-bottom:1px solid #999;
 
-    padding:20px 30px;
-
-}
-
-
-.logo{
+    padding:15px 22px;
 
     display:flex;
 
     align-items:center;
 
-    gap:18px;
+    justify-content:space-between;
 
 }
 
 
-/*==============================
-    CREST
-===============================*/
+.forum-brand{
 
-.crest{
-    width:64px;
-    height:64px;
-    border-radius:50%;
-    background:
-        radial-gradient(
-            circle,
-            #f0f0f0,
-            #a6a6a6
-        );
-    border:2px solid #777;
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
 
 }
 
 
-/*==============================
-    UNIVERSITY TEXT
-===============================*/
+.forum-crest{
 
-.logo h1{
+    width:55px;
 
-    font-size:30px;
+    height:55px;
 
-    font-family:Georgia, serif;
+    background:#686868;
 
-    color:#2f2f2f;
+    color:white;
 
-}
+    border:3px double white;
 
+    outline:1px solid #555;
 
-.logo p{
+    display:flex;
 
-    margin-top:4px;
+    align-items:center;
 
-    color:#666;
+    justify-content:center;
 
-    font-size:14px;
+    font-family:Georgia,serif;
 
-}
-
-/*=====================================
-    BREADCRUMBS
-======================================*/
-
-.breadcrumbs{
-
-    background:#efefef;
-
-    border-bottom:1px solid #c9c9c9;
-
-    padding:10px 25px;
-
-    font-size:12px;
-
-}
-
-.breadcrumbs a{
-
-    color:#1c57a7;
-
-}
-
-.breadcrumbs span{
-
-    margin:0 6px;
-
-    color:#666;
-
-}
-
-.current{
-
-    color:#444;
+    font-size:18px;
 
     font-weight:bold;
 
 }
 
 
-/*=====================================
-    ARTICLE HEADER
-======================================*/
+.forum-brand h1{
 
-.article-header{
+    font-family:Georgia,serif;
 
-    background:white;
-
-    padding:30px;
-
-    border-bottom:1px solid #d7d7d7;
-
-}
-
-.article-header h1{
-
-    font-family:Georgia, serif;
-
-    font-size:34px;
+    font-size:24px;
 
     font-weight:normal;
 
-    color:#2d2d2d;
-
-    margin-bottom:10px;
+    color:#333;
 
 }
 
-.authors{
+
+.forum-brand p{
+
+    font-size:12px;
 
     color:#666;
 
-    font-size:14px;
-
-    margin-bottom:15px;
+    margin-top:3px;
 
 }
 
 
-/*=====================================
-    BADGES
-======================================*/
+.forum-header-links{
 
-.badges{
+    font-size:11px;
+
+    color:#666;
+
+}
+
+.forum-header-links span{
+
+    margin:0 7px;
+
+    color:#aaa;
+
+}
+
+
+/*====================================
+    FORUM NAVIGATION
+=====================================*/
+
+.forum-nav{
+
+    min-height:32px;
+
+    background:
+
+        linear-gradient(
+            #eeeeee,
+            #d8d8d8
+        );
+
+    border-bottom:1px solid #aaa;
 
     display:flex;
 
-    flex-wrap:wrap;
+    align-items:center;
 
-    gap:8px;
+    padding:0 12px;
 
-}
-
-.badge{
-
-    background:#dce8fb;
-
-    border:1px solid #a7bfe7;
-
-    color:#24508f;
-
-    padding:4px 10px;
+    gap:18px;
 
     font-size:11px;
 
 }
 
-.badge.restricted{
 
-    background:#f7dfdf;
+.forum-nav a{
 
-    border-color:#cb9999;
-
-    color:#8c1d1d;
+    color:#174f98;
 
 }
 
 
-/*=====================================
-    TOOLBAR
-======================================*/
+.forum-nav a:hover{
 
-.record-toolbar{
-
-    background:#ececec;
-
-    border-top:1px solid white;
-
-    border-bottom:1px solid #bdbdbd;
-
-    padding:10px 20px;
-
-    display:flex;
-
-    gap:8px;
-
-}
-
-.record-toolbar button{
-
-    min-width:95px;
+    text-decoration:underline;
 
 }
 
 
-/*=====================================
-    MAIN LAYOUT
-======================================*/
+.nav-spacer{
 
-.record-layout{
-
-    display:grid;
-
-    grid-template-columns:1fr 320px;
-
-    gap:25px;
-
-    padding:25px;
-
-    background:#f5f5f5;
+    flex:1;
 
 }
 
 
-/*=====================================
-    LEFT COLUMN
-======================================*/
+/*====================================
+    BREADCRUMBS
+=====================================*/
 
-.article-main{
+.forum-breadcrumbs{
 
-    display:flex;
+    background:#f2f2f2;
 
-    flex-direction:column;
+    border-bottom:1px solid #ccc;
 
-    gap:20px;
+    padding:8px 14px;
+
+    font-size:11px;
+
+    color:#666;
 
 }
 
 
-/*=====================================
-    PANELS
-======================================*/
+.forum-breadcrumbs span{
 
-.panel{
+    margin:0 6px;
+
+}
+
+
+.forum-breadcrumbs a{
+
+    color:#174f98;
+
+}
+
+
+/*====================================
+    THREAD HEADER
+=====================================*/
+
+.thread-header{
 
     background:white;
 
-    border:1px solid #c8c8c8;
+    border-bottom:1px solid #aaa;
 
-    padding:25px;
+    padding:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
 
 }
 
-.panel h2{
+
+.thread-header h2{
+
+    font-family:Georgia,serif;
+
+    font-size:21px;
+
+    font-weight:normal;
+
+    color:#333;
+
+    margin-bottom:4px;
+
+}
+
+
+.thread-header p{
+
+    color:#777;
+
+    font-size:11px;
+
+}
+
+
+.thread-actions{
+
+    display:flex;
+
+    gap:6px;
+
+}
+
+
+.thread-actions button{
+
+    font-size:11px;
+
+}
+
+
+/*====================================
+    POSTS
+=====================================*/
+
+.thread{
+
+    background:#ddd;
+
+}
+
+
+.post{
+
+    border-bottom:1px solid #777;
+
+}
+
+
+.post-top{
+
+    height:30px;
+
+    background:
+
+        linear-gradient(
+            #e8e8e8,
+            #d0d0d0
+        );
+
+    border-top:1px solid #aaa;
+
+    border-bottom:1px solid #999;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 12px;
+
+    color:#444;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+}
+
+
+.post-/*====================================
+    PROFILE
+=====================================*/
+
+.profile{
+
+    background:#e8e8e8;
+
+    border-right:1px solid #999;
+
+    padding:14px;
+
+    text-align:center;
+
+}
+
+
+.avatar{
+
+    width:110px;
+
+    height:110px;
+
+    margin:0 auto 12px;
+
+    border:1px solid #666;
+
+    box-shadow:
+
+        inset 0 0 0 1px rgba(255,255,255,.3);
+
+}
+
+
+.avatar-red{
+
+    background:#9e3444;
+
+}
+
+
+.avatar-blue{
+
+    background:#496a8e;
+
+}
+
+
+.avatar-orange{
+
+    background:#c7652e;
+
+}
+
+
+.username{
+
+    font-weight:bold;
+
+    font-size:14px;
+
+    color:#174f98;
+
+    margin-bottom:3px;
+
+}
+
+
+.usertitle{
+
+    font-size:11px;
+
+    color:#555;
+
+    margin-bottom:8px;
+
+}
+
+
+.rank{
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    color:#8d283b;
+
+    margin-bottom:12px;
+
+}
+
+
+.rank.new-member{
+
+    color:#a34747;
+
+}
+
+
+.rank.member{
+
+    color:#777;
+
+}
+
+
+.profile-info{
+
+    border-top:1px solid #bbb;
+
+    padding-top:10px;
+
+    color:#666;
+
+    font-size:10px;
+
+    line-height:1.8;
+
+}
+
+
+/*====================================
+    POST CONTENT
+=====================================*/
+
+.content{
+
+    background:#fff;
+
+}
+
+
+.content h3{
+
+    background:#f4f4f4;
+
+    border-bottom:1px solid #bbb;
+
+    padding:12px 18px;
+
+    font-family:Georgia,serif;
 
     font-size:18px;
 
-    margin-bottom:18px;
+    font-weight:normal;
 
-    color:#2f2f2f;
-
-}
-
-.panel p{
-
-    line-height:1.6;
-
-    text-align:justify;
+    color:#333;
 
 }
 
 
-/*=====================================
-    METADATA TABLE
-======================================*/
+.content-inner{
 
-.metadata{
+    padding:18px 25px 25px;
 
-    background:white;
+    color:#222;
 
-    border:1px solid #c8c8c8;
+    font-size:13px;
 
-    padding:25px;
+    line-height:1.7;
 
 }
 
-.metadata h2{
 
-    margin-bottom:18px;
+.content-inner p{
 
-}
-
-.metadata table{
-
-    width:100%;
-
-    border-collapse:collapse;
+    margin-bottom:14px;
 
 }
 
-.metadata td{
+
+/*====================================
+    EMBED
+=====================================*/
+
+.embed{
+
+    width:520px;
+
+    max-width:100%;
+
+    min-height:85px;
+
+    display:flex;
+
+    gap:12px;
+
+    align-items:flex-start;
+
+    border:1px solid #aaa;
+
+    background:#e8ebef;
 
     padding:10px;
 
-    border-bottom:1px solid #e2e2e2;
+    margin-bottom:18px;
 
 }
 
-.metadata td:first-child{
 
-    width:180px;
+.embed-thumb{
 
-    background:#f7f7f7;
+    width:92px;
+
+    height:64px;
+
+    flex-shrink:0;
+
+    background:
+
+        linear-gradient(
+            #555,
+            #222
+        );
+
+    border:1px solid #444;
+
+    position:relative;
+
+}
+
+
+.embed-thumb::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,.15),
+            transparent 30%
+        );
+
+}
+
+
+.embed-title{
 
     font-weight:bold;
+
+    color:#333;
+
+    margin-bottom:3px;
+
+}
+
+
+.embed-description{
+
+    font-size:11px;
 
     color:#555;
 
 }
 
 
-/*=====================================
-    RELATED WORKS
-======================================*/
+.embed-url{
 
-.related-paper{
+    font-size:10px;
 
-    border-top:1px solid #e5e5e5;
+    color:#174f98;
 
-    padding:15px 0;
+    text-decoration:underline;
 
-}
-
-.related-paper:first-of-type{
-
-    border:none;
-
-}
-
-.related-paper h3{
-
-    color:#1b56a8;
-
-    font-size:18px;
-
-    font-family:Georgia, serif;
-
-    font-weight:normal;
-
-    margin-bottom:4px;
-
-}
-
-.related-paper p{
-
-    color:#666;
-
-    font-size:13px;
-
-}
-
-.related-paper:hover{
-
-    background:#fafafa;
+    margin-top:5px;
 
 }
 
 
-/*=====================================
-    SIDEBAR
-======================================*/
+/*====================================
+    QUOTE
+=====================================*/
 
-.article-sidebar{
+.quote{
 
-    display:flex;
+    margin-top:12px;
 
-    flex-direction:column;
+    border:1px solid #c4c4c4;
 
-    gap:20px;
-
-}
-
-
-/*=====================================
-    DOWNLOAD BOX
-======================================*/
-
-.download-box{
-
-    background:white;
-
-    border:1px solid #c8c8c8;
-
-    padding:20px;
+    background:#f1f1f1;
 
 }
 
-.download-box h2{
 
-    margin-bottom:15px;
+.quote-header{
 
-}
+    background:#ddd;
 
-.download-box table{
+    border-bottom:1px solid #c4c4c4;
 
-    width:100%;
+    padding:5px 8px;
 
-}
+    color:#555;
 
-.download-box td{
-
-    padding:8px;
-
-    border-bottom:1px solid #ececec;
-
-}
-
-.download-box td:first-child{
+    font-size:10px;
 
     font-weight:bold;
 
+}
+
+
+.quote p{
+
+    padding:8px 10px;
+
+    margin:0;
+
+    color:#555;
+
+    font-size:12px;
+
+}
+
+
+/*====================================
+    SIGNATURE
+=====================================*/
+
+.signature{
+
+    margin-top:22px;
+
+    padding-top:10px;
+
+    border-top:1px dotted #aaa;
+
+    color:#666;
+
+    font-family:"Courier New",monospace;
+
+    font-size:10px;
+
+}
+
+
+/*====================================
+    HORROR DETAILS
+=====================================*/
+
+.redacted{
+
+    background:#000;
+
+    color:#000;
+
+    padding:1px 3px;
+
+    cursor:default;
+
+}
+
+
+.redacted:hover{
+
+    color:#fff;
+
+}
+
+
+.mystery{
+
+    background:#a72f42;
+
+    color:white;
+
+    padding:2px 8px;
+
+}
+
+
+/*====================================
+    THREAD FOOTER
+=====================================*/
+
+.thread-footer{
+
+    padding:12px 15px;
+
+    background:#e9e9e9;
+
+    border-top:1px solid #888;
+
+    border-bottom:1px solid #aaa;
+
+    font-size:10px;
+
+    color:#444;
+
+}
+
+
+.thread-footer .small{
+
+    margin-top:5px;
+
     color:#666;
 
 }
 
 
-/*=====================================
-    PDF PREVIEW
-======================================*/
+/*====================================
+    UNIVERSITY FOOTER
+=====================================*/
 
-.preview{
+.forum-footer{
 
-    background:#777;
+    background:#e5e5e5;
 
-    border:1px solid #666;
+    border-top:1px solid #bbb;
 
-    padding:20px;
+    padding:14px 18px;
 
-}
+    color:#666;
 
-.preview-page{
+    font-size:10px;
 
-    background:white;
-
-    min-height:460px;
-
-    box-shadow:0 0 15px rgba(0,0,0,.25);
-
-    padding:40px;
+    line-height:1.8;
 
 }
 
 
-/*=====================================
-    FAKE PAPER
-======================================*/
+.forum-footer a{
 
-.fake-paper{
-
-    font-family:Georgia, serif;
-
-    color:#222;
-
-}
-
-.fake-paper h2{
-
-    text-align:center;
-
-    font-size:24px;
-
-    margin-bottom:20px;
-
-    font-weight:normal;
-
-}
-
-.fake-paper hr{
-
-    margin:20px 0;
-
-}
-
-.fake-paper p{
-
-    font-size:13px;
-
-    line-height:1.7;
-
-    margin-bottom:20px;
+    color:#24569a;
 
 }
 
 
-/*=====================================
-    HOVER EFFECTS
-======================================*/
+.forum-footer .copyright{
 
-.related-paper{
-
-    transition:.15s;
-
-    cursor:pointer;
-
-}
-
-.related-paper:hover{
-
-    padding-left:10px;
-
-}
-
-.badge{
-
-    transition:.15s;
-
-}
-
-.badge:hover{
-
-    filter:brightness(1.05);
+    color:#888;
 
 }
 
 
-/*=====================================
+/*====================================
     RESPONSIVE
-======================================*/
+=====================================*/
 
-@media(max-width:1200px){
+@media(max-width:1150px){
 
-.record-layout{
+    .forum-page{
 
-    grid-template-columns:1fr;
+        width:100%;
+
+    }
 
 }
 
+
+@media(max-width:800px){
+
+    .post-.profile{
+
+        border-right:none;
+
+        border-bottom:1px solid #999;
+
+        text-align:left;
+
+        display:flex;
+
+        align-items:center;
+
+        gap:12px;
+
+    }
+
+    .avatar{
+
+        width:60px;
+
+        height:60px;
+
+        margin:0;
+
+    }
+
+    .profile-info{
+
+        display:none;
+
+    }
+
+    .forum-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:10px;
+
+    }
+
 }
-.forum a { color:#1b56a8; text-decoration:none; }
-.forum a:hover { text-decoration:underline; }
+
+/* GitHub Pages adjustments */
+.forum-page a { color:#174f98; }
+.forum-page a:hover { text-decoration:underline; }
 .new-tab a { color:inherit; text-decoration:none; }
-button { font-family:Tahoma, Verdana, Arial, sans-serif; }
-@media(max-width:1200px){ .forum{width:100%;} }
+button { font-family:Tahoma, Verdana, Arial, sans-serif; cursor:pointer; }
+
+@media(max-width:800px){
+  .forum-page{width:100%;}
+}

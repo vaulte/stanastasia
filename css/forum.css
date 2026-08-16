@@ -1,0 +1,704 @@
+/* Ravenswood Student Forum — page-specific styles */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* Desktop shell */
+/* Browser window */
+/* Tabs */
+.tab .icon{
+  width:16px;
+  height:16px;
+  background:#ff6600;
+  border-radius:2px;
+}
+
+.tab .close{
+  margin-left:auto;
+  font-weight:bold;
+  color:#333;
+}
+
+/* Toolbar */
+/* Page viewport */
+/* Forum page */
+.forum{
+  width:1120px;
+  margin:0 auto;
+  background:#fff;
+  border:1px solid #444;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+/*================================================
+
+    RAVENSWOOD UNIVERSITY REPOSITORY
+    ARTICLE PAGE
+
+================================================*/
+
+
+/*-------------------------
+    FOOTER
+--------------------------*/
+
+footer{
+
+    margin-top:40px;
+
+    padding:14px;
+
+    font-size:12px;
+
+    color:#666;
+
+    border-top:1px solid #d4d4d4;
+
+}
+
+
+
+/*==============================
+    PAGE CONTAINER
+===============================*/
+
+.repository{
+
+    display:grid;
+
+    grid-template-columns:240px 1fr;
+
+    min-height:100%;
+
+}
+
+
+/*==============================
+    SIDEBAR
+===============================*/
+
+.repository aside{
+
+    background:#f3f3f3;
+
+    border-right:1px solid #c6c6c6;
+
+    padding:25px;
+
+}
+
+
+.repository aside h2{
+
+    font-size:14px;
+
+    color:#555;
+
+    margin-bottom:10px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+
+.repository aside ul{
+
+    margin-bottom:30px;
+
+}
+
+
+.repository aside li{
+
+    padding:6px 4px;
+
+    cursor:pointer;
+
+    transition:.15s;
+
+}
+
+
+.repository aside li:hover{
+
+    background:#dfe8f7;
+
+}
+
+
+/*==============================
+    CONTENT
+===============================*/
+
+.repository main{
+
+    padding:30px;
+
+    background:#fafafa;
+
+}
+
+
+/*==============================
+    UNIVERSITY HEADER
+===============================*/
+
+.uni-header{
+
+    background:
+
+        linear-gradient(
+
+            #f6f6f6,
+            #d9d9d9
+
+        );
+
+    border-bottom:1px solid #9a9a9a;
+
+    padding:20px 30px;
+
+}
+
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+
+/*==============================
+    CREST
+===============================*/
+
+.crest{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    background:
+        radial-gradient(
+            circle,
+            #f0f0f0,
+            #a6a6a6
+        );
+    border:2px solid #777;
+
+}
+
+
+/*==============================
+    UNIVERSITY TEXT
+===============================*/
+
+.logo h1{
+
+    font-size:30px;
+
+    font-family:Georgia, serif;
+
+    color:#2f2f2f;
+
+}
+
+
+.logo p{
+
+    margin-top:4px;
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+/*=====================================
+    BREADCRUMBS
+======================================*/
+
+.breadcrumbs{
+
+    background:#efefef;
+
+    border-bottom:1px solid #c9c9c9;
+
+    padding:10px 25px;
+
+    font-size:12px;
+
+}
+
+.breadcrumbs a{
+
+    color:#1c57a7;
+
+}
+
+.breadcrumbs span{
+
+    margin:0 6px;
+
+    color:#666;
+
+}
+
+.current{
+
+    color:#444;
+
+    font-weight:bold;
+
+}
+
+
+/*=====================================
+    ARTICLE HEADER
+======================================*/
+
+.article-header{
+
+    background:white;
+
+    padding:30px;
+
+    border-bottom:1px solid #d7d7d7;
+
+}
+
+.article-header h1{
+
+    font-family:Georgia, serif;
+
+    font-size:34px;
+
+    font-weight:normal;
+
+    color:#2d2d2d;
+
+    margin-bottom:10px;
+
+}
+
+.authors{
+
+    color:#666;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+
+/*=====================================
+    BADGES
+======================================*/
+
+.badges{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+}
+
+.badge{
+
+    background:#dce8fb;
+
+    border:1px solid #a7bfe7;
+
+    color:#24508f;
+
+    padding:4px 10px;
+
+    font-size:11px;
+
+}
+
+.badge.restricted{
+
+    background:#f7dfdf;
+
+    border-color:#cb9999;
+
+    color:#8c1d1d;
+
+}
+
+
+/*=====================================
+    TOOLBAR
+======================================*/
+
+.record-toolbar{
+
+    background:#ececec;
+
+    border-top:1px solid white;
+
+    border-bottom:1px solid #bdbdbd;
+
+    padding:10px 20px;
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.record-toolbar button{
+
+    min-width:95px;
+
+}
+
+
+/*=====================================
+    MAIN LAYOUT
+======================================*/
+
+.record-layout{
+
+    display:grid;
+
+    grid-template-columns:1fr 320px;
+
+    gap:25px;
+
+    padding:25px;
+
+    background:#f5f5f5;
+
+}
+
+
+/*=====================================
+    LEFT COLUMN
+======================================*/
+
+.article-main{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+/*=====================================
+    PANELS
+======================================*/
+
+.panel{
+
+    background:white;
+
+    border:1px solid #c8c8c8;
+
+    padding:25px;
+
+}
+
+.panel h2{
+
+    font-size:18px;
+
+    margin-bottom:18px;
+
+    color:#2f2f2f;
+
+}
+
+.panel p{
+
+    line-height:1.6;
+
+    text-align:justify;
+
+}
+
+
+/*=====================================
+    METADATA TABLE
+======================================*/
+
+.metadata{
+
+    background:white;
+
+    border:1px solid #c8c8c8;
+
+    padding:25px;
+
+}
+
+.metadata h2{
+
+    margin-bottom:18px;
+
+}
+
+.metadata table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.metadata td{
+
+    padding:10px;
+
+    border-bottom:1px solid #e2e2e2;
+
+}
+
+.metadata td:first-child{
+
+    width:180px;
+
+    background:#f7f7f7;
+
+    font-weight:bold;
+
+    color:#555;
+
+}
+
+
+/*=====================================
+    RELATED WORKS
+======================================*/
+
+.related-paper{
+
+    border-top:1px solid #e5e5e5;
+
+    padding:15px 0;
+
+}
+
+.related-paper:first-of-type{
+
+    border:none;
+
+}
+
+.related-paper h3{
+
+    color:#1b56a8;
+
+    font-size:18px;
+
+    font-family:Georgia, serif;
+
+    font-weight:normal;
+
+    margin-bottom:4px;
+
+}
+
+.related-paper p{
+
+    color:#666;
+
+    font-size:13px;
+
+}
+
+.related-paper:hover{
+
+    background:#fafafa;
+
+}
+
+
+/*=====================================
+    SIDEBAR
+======================================*/
+
+.article-sidebar{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+/*=====================================
+    DOWNLOAD BOX
+======================================*/
+
+.download-box{
+
+    background:white;
+
+    border:1px solid #c8c8c8;
+
+    padding:20px;
+
+}
+
+.download-box h2{
+
+    margin-bottom:15px;
+
+}
+
+.download-box table{
+
+    width:100%;
+
+}
+
+.download-box td{
+
+    padding:8px;
+
+    border-bottom:1px solid #ececec;
+
+}
+
+.download-box td:first-child{
+
+    font-weight:bold;
+
+    color:#666;
+
+}
+
+
+/*=====================================
+    PDF PREVIEW
+======================================*/
+
+.preview{
+
+    background:#777;
+
+    border:1px solid #666;
+
+    padding:20px;
+
+}
+
+.preview-page{
+
+    background:white;
+
+    min-height:460px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.25);
+
+    padding:40px;
+
+}
+
+
+/*=====================================
+    FAKE PAPER
+======================================*/
+
+.fake-paper{
+
+    font-family:Georgia, serif;
+
+    color:#222;
+
+}
+
+.fake-paper h2{
+
+    text-align:center;
+
+    font-size:24px;
+
+    margin-bottom:20px;
+
+    font-weight:normal;
+
+}
+
+.fake-paper hr{
+
+    margin:20px 0;
+
+}
+
+.fake-paper p{
+
+    font-size:13px;
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+
+/*=====================================
+    HOVER EFFECTS
+======================================*/
+
+.related-paper{
+
+    transition:.15s;
+
+    cursor:pointer;
+
+}
+
+.related-paper:hover{
+
+    padding-left:10px;
+
+}
+
+.badge{
+
+    transition:.15s;
+
+}
+
+.badge:hover{
+
+    filter:brightness(1.05);
+
+}
+
+
+/*=====================================
+    RESPONSIVE
+======================================*/
+
+@media(max-width:1200px){
+
+.record-layout{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+.forum a { color:#1b56a8; text-decoration:none; }
+.forum a:hover { text-decoration:underline; }
+.new-tab a { color:inherit; text-decoration:none; }
+button { font-family:Tahoma, Verdana, Arial, sans-serif; }
+@media(max-width:1200px){ .forum{width:100%;} }

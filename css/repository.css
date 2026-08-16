@@ -1,0 +1,385 @@
+/* Ravenswood University Repository
+   Repository-specific styles.
+   Shared browser/desktop styles should remain in:
+   ./css/desktop.css
+   ./css/browser.css
+*/
+
+a{
+  color:#1b56a8;
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+h1{
+  font-size:28px;
+  font-weight:normal;
+}
+
+h2{
+  font-size:19px;
+  font-weight:bold;
+}
+
+h3{
+  font-size:16px;
+}
+
+p{
+  line-height:1.2;
+}
+
+ul{
+  list-style:none;
+}
+
+li{
+  margin-bottom:6px;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  padding:6px;
+  background:white;
+  border:1px solid #7f9db9;
+  font-family:Tahoma, Verdana, Arial, sans-serif;
+  font-size:13px;
+}
+
+textarea{
+  resize:none;
+}
+
+button{
+  padding:4px 10px;
+  background:linear-gradient(#fafafa,#dadada);
+  border:1px solid #7c7c7c;
+  cursor:pointer;
+  font-family:Tahoma, Verdana, Arial, sans-serif;
+  font-size:12px;
+}
+
+button:hover{
+  background:linear-gradient(#ffffff,#ececec);
+}
+
+button:active{
+  box-shadow:inset 1px 1px 3px rgba(0,0,0,.25);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th{
+  background:#ececec;
+  text-align:left;
+  padding:8px;
+  border:1px solid #bababa;
+}
+
+td{
+  padding:8px;
+  border:1px solid #d2d2d2;
+}
+
+:root{
+  --xp-blue:#0057d8;
+  --xp-blue-dark:#003f98;
+  --xp-light:#f5f5f5;
+  --xp-grey:#dfdfdf;
+  --xp-border:#7f9db9;
+  --xp-dark:#4d4d4d;
+  --paper:#ffffff;
+  --sidebar:#f2f2f2;
+  --orange:#f36c21;
+  --orange-dark:#df5a14;
+  --archive:#d6dce6;
+  --repository:#f8f8f8;
+  --link:#1c57a7;
+}
+
+/* Repository page */
+.repository{
+  display:grid;
+  grid-template-columns:250px 1fr;
+  min-height:100%;
+  background:#ececec;
+}
+
+.repository aside{
+  background:#f4f4f4;
+  border-right:1px solid #c8c8c8;
+  padding:20px;
+}
+
+.repository aside h2{
+  font-size:13px;
+  text-transform:uppercase;
+  color:#666;
+  margin-bottom:12px;
+  letter-spacing:.5px;
+}
+
+.repository aside ul{
+  margin-bottom:28px;
+}
+
+.repository aside li{
+  padding:7px 8px;
+  cursor:pointer;
+  transition:.15s;
+  border:1px solid transparent;
+}
+
+.repository aside li:hover{
+  background:white;
+  border-color:#d0d0d0;
+}
+
+.repository aside li::before{
+  content:"▸ ";
+  color:#777;
+}
+
+.repository aside li.active{
+  background:#dfe8f7;
+  border-color:#b9cbe5;
+  color:#174d91;
+}
+
+.repository main{
+  background:#fafafa;
+  padding:25px;
+}
+
+.uni-header{
+  background:linear-gradient(#f8f8f8,#dddddd);
+  border-bottom:1px solid #b5b5b5;
+  padding:18px 25px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.crest{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  background:radial-gradient(circle,#f5f5f5,#9f9f9f);
+  border:2px solid #888;
+}
+
+.logo h1{
+  font-family:Georgia,serif;
+  font-size:30px;
+  color:#2b2b2b;
+}
+
+.logo p{
+  color:#666;
+  margin-top:3px;
+}
+
+.search-box{
+  background:white;
+  border:1px solid #c8c8c8;
+  padding:20px;
+  margin-bottom:22px;
+}
+
+.search-box h2{
+  margin-bottom:18px;
+  font-size:18px;
+}
+
+.search-grid{
+  display:grid;
+  grid-template-columns:2fr 2fr 1.5fr auto;
+  gap:10px;
+}
+
+.results-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:18px;
+  padding-bottom:8px;
+  border-bottom:1px solid #d4d4d4;
+}
+
+.results-header span{
+  color:#666;
+  font-size:12px;
+}
+
+.paper{
+  background:white;
+  border:1px solid #c8c8c8;
+  margin-bottom:18px;
+  padding:18px;
+  transition:.15s;
+}
+
+.paper:hover{
+  box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.paper h3{
+  color:#1c57a7;
+  margin-bottom:8px;
+  font-family:Georgia,serif;
+  font-size:22px;
+  font-weight:normal;
+}
+
+.meta{
+  color:#777;
+  font-size:12px;
+  margin-bottom:14px;
+}
+
+.paper p{
+  color:#333;
+  line-height:1.7;
+  margin-bottom:16px;
+}
+
+.actions{
+  display:flex;
+  gap:18px;
+  font-size:12px;
+}
+
+.actions a{
+  color:#1c57a7;
+}
+
+.paper.restricted{
+  border-left:6px solid #8f2222;
+}
+
+.paper.restricted h3{
+  color:#7d1d1d;
+}
+
+.paper.restricted p{
+  font-family:"Courier New",monospace;
+  color:#555;
+}
+
+.badge{
+  display:inline-block;
+  padding:2px 6px;
+  font-size:11px;
+  background:#dfe9f8;
+  border:1px solid #b6c7e7;
+  color:#28508e;
+  margin-left:6px;
+}
+
+.badge.restricted{
+  background:#f8dfdf;
+  border-color:#d59d9d;
+  color:#8b2020;
+}
+
+.preview{
+  margin-top:30px;
+  background:#6e6e6e;
+  padding:35px;
+  display:flex;
+  justify-content:center;
+}
+
+.preview-page{
+  width:360px;
+  min-height:480px;
+  background:white;
+  box-shadow:0 0 18px rgba(0,0,0,.25);
+}
+
+.metadata{
+  margin-top:25px;
+  background:white;
+  border:1px solid #c8c8c8;
+  padding:18px;
+}
+
+.metadata table{
+  width:100%;
+}
+
+.metadata td:first-child{
+  width:180px;
+  font-weight:bold;
+  color:#555;
+}
+
+.pagination{
+  margin-top:25px;
+  display:flex;
+  justify-content:center;
+  gap:8px;
+}
+
+.pagination button{
+  min-width:30px;
+}
+
+footer{
+  background:#efefef;
+  border-top:1px solid #c8c8c8;
+  color:#666;
+  font-size:11px;
+  text-align:center;
+  padding:12px;
+}
+
+.divider{
+  height:1px;
+  background:#d8d8d8;
+  margin:20px 0;
+}
+
+.status-bar{
+  height:24px;
+  background:#ece9d8;
+  border-top:1px solid #b3b3b3;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 8px;
+  font-size:11px;
+  color:#444;
+}
+
+.status-left,
+.status-right{
+  display:flex;
+  gap:12px;
+}
+
+@media(max-width:1050px){
+  .repository{
+    grid-template-columns:1fr;
+  }
+
+  .repository aside{
+    border-right:none;
+    border-bottom:1px solid #ccc;
+  }
+
+  .search-grid{
+    grid-template-columns:1fr;
+  }
+}

@@ -569,23 +569,29 @@ body{
 
     font-weight:bold;
 
-    color:#8d283b;
+    color:#2274a5;
 
     margin-bottom:12px;
 
 }
 
 
-.rank.new-member{
+.rank.member{
 
-    color:#a34747;
+    color:#545e75;
 
 }
 
 
-.rank.member{
+.rank.logged{
 
     color:#777;
+
+}
+
+.rank.banned{
+
+    color:#8c2007;
 
 }
 

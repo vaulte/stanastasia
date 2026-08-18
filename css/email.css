@@ -4,6 +4,10 @@
   box-sizing:border-box;
 }
 
+.no-underline {
+    text-decoration: none;
+}
+
 body{
   background:#cfcfcf;
   font-family:Tahoma, Verdana, Arial, sans-serif;
@@ -337,8 +341,6 @@ body{
 
     margin-bottom:4px;
 
-  text-decoration:none;
-
 }
 
 
@@ -364,7 +366,7 @@ body{
 .folder:hover{
 
     background:#d4e4f8;
-  text-decoration:none;
+
 
 }
 

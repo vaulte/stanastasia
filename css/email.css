@@ -4,6 +4,14 @@
   box-sizing:border-box;
 }
 
+a {
+  text-decoration:none;
+}
+
+a:hover {
+  text-decoration:italic;
+}
+
 body{
   background:#cfcfcf;
   font-family:Tahoma, Verdana, Arial, sans-serif;

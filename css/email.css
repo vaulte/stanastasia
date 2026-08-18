@@ -11,6 +11,7 @@ body{
   justify-content:center;
   align-items:flex-start;
   padding:20px;
+  text-decoration: none;
 }
 
 /* Desktop shell */

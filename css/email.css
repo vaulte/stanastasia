@@ -269,6 +269,7 @@ body{
 .account-info a{
 
     color:#1b56a8;
+  text-decoration: none;
 
 }
 
@@ -365,7 +366,7 @@ body{
 
     background:#d4e4f8;
 
-    text-decoration:none;
+    text-decoration:underline;
 
 }
 

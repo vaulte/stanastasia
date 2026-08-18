@@ -362,6 +362,7 @@ body{
 .folder:hover{
 
     background:#d4e4f8;
+  text-decoration:none;
 
 }
 

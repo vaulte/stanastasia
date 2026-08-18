@@ -170,8 +170,6 @@ body{
             #d8d8d8
         );
 
-    border-bottom:1px solid #aaa;
-
     display:flex;
 
     align-items:center;
@@ -415,8 +413,6 @@ body{
             #e0e0e0
         );
 
-    border-bottom:1px solid #bbb;
-
     padding:10px 15px;
 
     display:flex;
@@ -477,8 +473,6 @@ body{
 
     background:white;
 
-    border-bottom:1px solid #bbb;
-
 }
 
 
@@ -499,8 +493,6 @@ body{
     gap:8px;
 
     padding:7px 12px;
-
-    border-bottom:1px solid #e3e3e3;
 
     color:#333;
 

@@ -11,7 +11,6 @@ body{
   justify-content:center;
   align-items:flex-start;
   padding:20px;
-  text-decoration: none;
 }
 
 /* Desktop shell */
@@ -270,7 +269,6 @@ body{
 .account-info a{
 
     color:#1b56a8;
-  text-decoration: none;
 
 }
 
@@ -301,8 +299,6 @@ body{
     border-right:1px solid #aaa;
 
     padding:15px 12px;
-
-    text-decoration: none;
 
 }
 

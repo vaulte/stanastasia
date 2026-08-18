@@ -4,10 +4,6 @@
   box-sizing:border-box;
 }
 
-.no-underline {
-    text-decoration: none !important;
-}
-
 body{
   background:#cfcfcf;
   font-family:Tahoma, Verdana, Arial, sans-serif;
@@ -151,7 +147,7 @@ body{
     background:#e9e9e9;
 
     color:#222;
- text-decoration:none;
+
 }
 
 
@@ -169,6 +165,8 @@ body{
             #f7f7f7,
             #d8d8d8
         );
+
+    border-bottom:0px solid #aaa;
 
     display:flex;
 
@@ -335,6 +333,8 @@ body{
 
     padding:5px 8px;
 
+    border-bottom:0px solid #c1c1c1;
+
     margin-bottom:4px;
 
 }
@@ -355,6 +355,8 @@ body{
     color:#333;
 
     font-size:12px;
+    
+    text-decoration:none;
 
 }
 
@@ -363,6 +365,7 @@ body{
 
     background:#d4e4f8;
 
+    text-decoration:underline;
 
 }
 
@@ -413,6 +416,8 @@ body{
             #e0e0e0
         );
 
+    border-bottom:0px solid #bbb;
+
     padding:10px 15px;
 
     display:flex;
@@ -431,7 +436,6 @@ body{
     font-weight:normal;
 
     color:#333;
-  text-decoration:none;
 
 }
 
@@ -473,6 +477,8 @@ body{
 
     background:white;
 
+    border-bottom:1px solid #bbb;
+
 }
 
 
@@ -494,9 +500,13 @@ body{
 
     padding:7px 12px;
 
+    border-bottom:1px solid #e3e3e3;
+
     color:#333;
 
     font-size:12px;
+    
+    text-decoration:none;
 
 }
 
@@ -505,7 +515,7 @@ body{
 
     background:#eaf2fc;
 
-    text-decoration:none;
+    text-decoration:underline;
 
 }
 
@@ -728,7 +738,4 @@ body{
         130px
         1fr
         70px;
-
-}
-
 }

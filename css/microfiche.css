@@ -1,0 +1,1058 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#cfcfcf;
+  font-family:Tahoma, Verdana, Arial, sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:20px;
+}
+
+/* Desktop shell */
+.desktop{
+  width:1280px;
+  height:800px;
+  background:#efefef;
+  border:2px solid #666;
+  box-shadow:
+    0 0 0 2px #fff inset,
+    0 20px 50px rgba(0,0,0,.25);
+  overflow:hidden;
+}
+
+/* Browser window */
+.browser{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  background:#dfe3ea;
+}
+
+/* Tabs */
+.tabs{
+  height:54px;
+  display:flex;
+  align-items:flex-end;
+  padding-left:8px;
+  background:#d6dae2;
+  border-bottom:1px solid #888;
+}
+
+.tab{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#f4f4f4;
+  border:1px solid #666;
+  border-bottom:none;
+  padding:14px 16px;
+  margin-right:4px;
+  font-size:14px;
+  min-width:240px;
+}
+
+.tab.active{
+  background:#ffffff;
+}
+
+.tab .icon{
+  width:16px;
+  height:16px;
+  background:#ff6600;
+  border-radius:2px;
+}
+
+.tab .close{
+  margin-left:auto;
+  font-weight:bold;
+  color:#333;
+}
+
+.new-tab{
+  font-size:26px;
+  padding:8px 14px;
+  color:#333;
+}
+
+/* Toolbar */
+.toolbar{
+  height:38px;
+  background:#ececec;
+  border-bottom:1px solid #999;
+  display:flex;
+  align-items:center;
+  padding:0 10px;
+  gap:8px;
+}
+
+.navbtn{
+  width:24px;
+  height:24px;
+  border:1px solid #888;
+  background:#f7f7f7;
+}
+
+.addressbar{
+  flex:1;
+  height:26px;
+  border:1px solid #888;
+  background:#fff;
+  font-family:"Courier New", monospace;
+  font-size:13px;
+  color:#222;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  padding-left:10px;
+  padding-top:5px;
+}
+
+/* Page viewport */
+.viewport{
+  flex:1;
+  overflow:auto;
+  background:#d9d9d9;
+  padding:14px;
+}
+
+/* Forum page */
+.forum{
+  width:1120px;
+  margin:0 auto;
+  background:#fff;
+  border:1px solid #444;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+/*================================================
+
+    RAVENSWOOD UNIVERSITY
+    MICROFICHE ARCHIVE VIEWER
+
+================================================*/
+
+
+/*====================================
+    APPLICATION
+=====================================*/
+
+.microfiche-application{
+
+    width:100%;
+
+    height:100%;
+
+    background:#555;
+
+    color:#222;
+
+    display:flex;
+
+    flex-direction:column;
+
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
+
+}
+
+
+/*====================================
+    HEADER
+=====================================*/
+
+.microfiche-header{
+
+    height:46px;
+
+    background:
+        linear-gradient(
+            #dedede,
+            #bcbcbc
+        );
+
+    border-bottom:1px solid #555;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 12px;
+
+}
+
+
+.microfiche-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+}
+
+
+.microfiche-icon{
+
+    width:30px;
+
+    height:30px;
+
+    background:#303030;
+
+    border:1px solid #222;
+
+    color:#d5d5d5;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:9px;
+
+    font-weight:bold;
+
+}
+
+
+.microfiche-logo strong{
+
+    display:block;
+
+    font-size:12px;
+
+    color:#222;
+
+}
+
+
+.microfiche-logo span{
+
+    display:block;
+
+    font-size:9px;
+
+    color:#555;
+
+}
+
+
+.archive-status{
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:9px;
+
+    color:#333;
+
+}
+
+
+.archive-status span{
+
+    color:#3d623d;
+
+    margin-left:7px;
+
+    font-weight:bold;
+
+}
+
+
+/*====================================
+    MENU
+=====================================*/
+
+.microfiche-menu{
+
+    height:25px;
+
+    background:#d0d0d0;
+
+    border-bottom:1px solid #777;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:0 10px;
+
+    font-size:10px;
+
+}
+
+
+.microfiche-menu span{
+
+    cursor:pointer;
+
+}
+
+
+/*====================================
+    CONTROLS
+=====================================*/
+
+.microfiche-controls{
+
+    min-height:38px;
+
+    background:
+        linear-gradient(
+            #eeeeee,
+            #d4d4d4
+        );
+
+    border-bottom:1px solid #777;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:5px 8px;
+
+    flex-wrap:wrap;
+
+}
+
+
+.control-group{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:4px;
+
+    font-size:9px;
+
+}
+
+
+.control-group label{
+
+    font-weight:bold;
+
+    color:#444;
+
+}
+
+
+.control-group input{
+
+    width:38px;
+
+    height:21px;
+
+    border:1px solid #777;
+
+    text-align:center;
+
+    font-size:10px;
+
+}
+
+
+.control-group select{
+
+    height:22px;
+
+    font-size:9px;
+
+    border:1px solid #777;
+
+}
+
+
+.control-group button{
+
+    height:22px;
+
+    min-width:24px;
+
+    font-size:9px;
+
+    padding:2px 5px;
+
+    cursor:pointer;
+
+}
+
+
+/*====================================
+    WORKSPACE
+=====================================*/
+
+.microfiche-workspace{
+
+    flex:1;
+
+    display:flex;
+
+    overflow:hidden;
+
+    background:#3d3d3d;
+
+}
+
+
+/*====================================
+    FILM STRIP
+=====================================*/
+
+.film-strip{
+
+    width:105px;
+
+    flex-shrink:0;
+
+    background:#242424;
+
+    border-right:2px solid #111;
+
+    overflow:hidden;
+
+}
+
+
+.film-title{
+
+    padding:8px;
+
+    text-align:center;
+
+    background:#333;
+
+    color:#bbb;
+
+    border-bottom:1px solid #111;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+
+}
+
+
+.film-reel{
+
+    padding:12px 8px;
+
+    position:relative;
+
+}
+
+
+.reel-hole{
+
+    height:12px;
+
+    margin-bottom:8px;
+
+    border-top:2px dotted #777;
+
+    border-bottom:2px dotted #777;
+
+}
+
+
+/*====================================
+    CLICKABLE FILM FRAMES
+=====================================*/
+
+.film-frame{
+
+    width:100%;
+
+    height:48px;
+
+    margin-bottom:7px;
+
+    border:1px solid #555;
+
+    background:#111;
+
+    color:#777;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:9px;
+
+    cursor:pointer;
+
+}
+
+
+.film-frame:hover{
+
+    background:#333;
+
+    color:#ddd;
+
+}
+
+
+.film-frame.selected{
+
+    border:2px solid #aaa;
+
+    color:#eee;
+
+    background:#292929;
+
+}
+
+
+/*====================================
+    DOCUMENT VIEWER
+=====================================*/
+
+.microfiche-screen{
+
+    flex:1;
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#222;
+
+}
+
+
+.screen-header{
+
+    height:27px;
+
+    background:#303030;
+
+    border-bottom:1px solid #111;
+
+    color:#aaa;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 10px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:9px;
+
+}
+
+
+.scan-area{
+
+    flex:1;
+
+    overflow:auto;
+
+    padding:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+        radial-gradient(
+            ellipse,
+            #777,
+            #333 70%
+        );
+
+}
+
+
+.scan-image{
+
+    position:relative;
+
+    width:650px;
+
+    min-height:820px;
+
+    background:#d7d7d7;
+
+    box-shadow:
+
+        0 0 20px rgba(0,0,0,.7);
+
+    overflow:hidden;
+
+}
+
+
+/*====================================
+    SCANNED DOCUMENT
+=====================================*/
+
+.scan-paper{
+
+    position:absolute;
+
+    inset:35px;
+
+    background:#cfcfcf;
+
+    padding:55px 65px;
+
+    color:#222;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    filter:
+        grayscale(100%)
+        contrast(.85);
+
+}
+
+
+.scan-heading{
+
+    text-align:center;
+
+    font-size:18px;
+
+    letter-spacing:2px;
+
+    font-weight:bold;
+
+}
+
+
+.scan-subheading{
+
+    margin-top:6px;
+
+    text-align:center;
+
+    font-size:10px;
+
+    letter-spacing:1px;
+
+}
+
+
+.scan-rule{
+
+    height:1px;
+
+    background:#333;
+
+    margin:18px 0;
+
+}
+
+
+.scan-paper h1{
+
+    text-align:center;
+
+    font-size:20px;
+
+    font-weight:normal;
+
+}
+
+
+.scan-date{
+
+    text-align:center;
+
+    font-size:10px;
+
+    margin:8px 0 30px;
+
+}
+
+
+.document-content p{
+
+    font-size:12px;
+
+    line-height:1.7;
+
+    margin-bottom:17px;
+
+}
+
+
+.scan-signature{
+
+    margin-top:30px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:10px;
+
+}
+
+
+.scan-stamp{
+
+    position:absolute;
+
+    right:40px;
+
+    bottom:40px;
+
+    border:3px double #555;
+
+    padding:8px;
+
+    transform:rotate(-8deg);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:10px;
+
+    color:#555;
+
+}
+
+
+/*====================================
+    SCAN EFFECTS
+=====================================*/
+
+.scan-lines{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.17;
+
+    background:
+
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0px,
+            transparent 3px,
+            #111 4px
+        );
+
+}
+
+
+.scan-noise{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    opacity:.08;
+
+    background:
+
+        repeating-radial-gradient(
+            circle,
+            #000 0px,
+            #000 1px,
+            transparent 1px,
+            transparent 3px
+        );
+
+}
+
+
+/*====================================
+    SCREEN FOOTER
+=====================================*/
+
+.screen-footer{
+
+    height:24px;
+
+    background:#303030;
+
+    border-top:1px solid #111;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 10px;
+
+    color:#888;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:8px;
+
+}
+
+
+/*====================================
+    INFORMATION PANEL
+=====================================*/
+
+.microfiche-info{
+
+    width:205px;
+
+    flex-shrink:0;
+
+    background:#dedede;
+
+    border-left:2px solid #222;
+
+    overflow:auto;
+
+}
+
+
+.info-title{
+
+    background:
+        linear-gradient(
+            #eeeeee,
+            #c8c8c8
+        );
+
+    border-bottom:1px solid #999;
+
+    padding:8px;
+
+    font-size:9px;
+
+    font-weight:bold;
+
+    color:#444;
+
+}
+
+
+.info-section{
+
+    padding:9px;
+
+    font-size:9px;
+
+}
+
+
+.info-section strong{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#333;
+
+}
+
+
+.info-section strong:first-child{
+
+    margin-top:0;
+
+}
+
+
+.info-section span{
+
+    display:block;
+
+    margin-top:2px;
+
+    color:#666;
+
+    line-height:1.4;
+
+}
+
+
+.classified{
+
+    color:#8a2525 !important;
+
+    font-weight:bold;
+
+}
+
+
+.archive-notes{
+
+    padding:9px;
+
+    color:#666;
+
+    font-size:9px;
+
+    line-height:1.6;
+
+}
+
+
+.archive-actions{
+
+    padding:9px;
+
+}
+
+
+.archive-actions button{
+
+    width:100%;
+
+    margin-bottom:5px;
+
+    height:25px;
+
+    font-size:9px;
+
+    cursor:pointer;
+
+}
+
+
+/*====================================
+    STATUS BAR
+=====================================*/
+
+.microfiche-status{
+
+    height:21px;
+
+    background:#252525;
+
+    border-top:1px solid #111;
+
+    color:#777;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:0 9px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:8px;
+
+}
+
+
+/*====================================
+    SCROLLBARS
+=====================================*/
+
+.scan-area::-webkit-scrollbar{
+
+    width:16px;
+
+}
+
+
+.scan-area::-webkit-scrollbar-track{
+
+    background:#555;
+
+}
+
+
+.scan-area::-webkit-scrollbar-thumb{
+
+    background:#888;
+
+    border:1px solid #333;
+
+}
+
+
+/*====================================
+    SMALLER SCREENS
+=====================================*/
+
+@media(max-width:950px){
+
+    .microfiche-info{
+
+        display:none;
+
+    }
+
+}
+
+
+@media(max-width:650px){
+
+    .film-strip{
+
+        display:none;
+
+    }
+
+    .scan-area{
+
+        padding:15px;
+
+    }
+
+    .scan-image{
+
+        width:600px;
+
+    }
+
+}

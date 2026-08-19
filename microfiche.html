@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microfiche Archive Viewer — St. Anastasia' University</title>
+
+  <!-- Shared project shell styles -->
+  <link rel="stylesheet" href="./css/desktop.css">
+  <link rel="stylesheet" href="./css/browser.css">
+
+  <!-- Complete Microfiche viewer styling from the uploaded file -->
+  <link rel="stylesheet" href="./css/microfiche.css">
+</head>
+<body>
+<div class="desktop">
+  <div class="browser">
+
+          <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab">
+        <div class="icon" style="background:#bacda4"></div>
+        <span>Campus Map — St. Ana...</span>
+        <span class="close">✕</span>
+      </div>
+
+      <div class="tab">
+        <div class="icon" style="background:#777"></div>
+        <span>New Tab</span>
+        <span class="close">✕</span>
+      </div>
+
+      <div class="tab active">
+        <div class="icon" style="background:#96acb7"></div>
+        <span>Microfiche Archive V...</span>
+        <span class="close">✕</span>
+      </div></div>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <button class="navbtn"></button>
+      <button class="navbtn"></button>
+      <button class="navbtn"></button>
+      <div class="addressbar">https://archive.stanastasia.edu/</div>
+    </div>
+
+
+<div class="viewport">
+
+<div class="microfiche-application">
+
+<!-- =====================================================
+     APPLICATION HEADER
+====================================================== -->
+
+<header class="microfiche-header">
+
+
+    <div class="microfiche-logo">
+
+
+        <div class="microfiche-icon">
+
+            MF
+
+        </div>
+
+
+        <div>
+
+            <strong>
+                St. Anastasia' University
+            </strong>
+
+            <span>
+                Microfiche Archive Viewer
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="archive-status">
+
+        ARCHIVE TERMINAL
+
+        <span>
+            ONLINE
+        </span>
+
+    </div>
+
+
+</header>
+
+
+<!-- =====================================================
+     APPLICATION MENU
+====================================================== -->
+
+<nav class="microfiche-menu">
+
+    <span>
+        File
+    </span>
+
+    <span>
+        Film
+    </span>
+
+    <span>
+        Frame
+    </span>
+
+    <span>
+        Image
+    </span>
+
+    <span>
+        Search
+    </span>
+
+    <span>
+        Help
+    </span>
+
+</nav>
+
+
+<!-- =====================================================
+     MICROFICHE CONTROLS
+====================================================== -->
+
+<div class="microfiche-controls">
+
+
+    <!-- FILM -->
+
+    <div class="control-group">
+
+        <label>
+            Film:
+        </label>
+
+        <select>
+
+            <option>
+                RU-ARCH-1978-04
+            </option>
+
+            <option>
+                RU-ARCH-1977-12
+            </option>
+
+            <option>
+                RU-ARCH-1969-08
+            </option>
+
+            <option>
+                RU-ARCH-1954-02
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- FRAME -->
+
+    <div class="control-group">
+
+        <label>
+            Frame:
+        </label>
+
+
+        <button
+            onclick="previousFrame()"
+        >
+            ◀
+        </button>
+
+
+        <input
+            type="text"
+            id="frameNumber"
+            value="037"
+            readonly
+        >
+
+
+        <button
+            onclick="nextFrame()"
+        >
+            ▶
+        </button>
+
+
+        <span>
+            / 112
+        </span>
+
+    </div>
+
+
+    <!-- ZOOM -->
+
+    <div class="control-group">
+
+        <label>
+            Zoom:
+        </label>
+
+
+        <button>
+            −
+        </button>
+
+
+        <select>
+
+            <option>
+                100%
+            </option>
+
+            <option>
+                125%
+            </option>
+
+            <option>
+                150%
+            </option>
+
+            <option>
+                200%
+            </option>
+
+        </select>
+
+
+        <button>
+            +
+        </button>
+
+    </div>
+
+
+    <!-- IMAGE CONTROLS -->
+
+    <div class="control-group">
+
+        <button>
+            Rotate
+        </button>
+
+        <button>
+            Invert
+        </button>
+
+    </div>
+
+
+</div>
+
+
+<!-- =====================================================
+     MAIN MICROFICHE WORKSPACE
+====================================================== -->
+
+<div class="microfiche-workspace">
+
+
+<!-- =====================================================
+     LEFT FILM STRIP
+====================================================== -->
+
+<aside class="film-strip">
+
+
+    <div class="film-title">
+
+        FILM
+
+    </div>
+
+
+    <div class="film-reel">
+
+
+        <div class="reel-hole"></div>
+
+
+        <button
+            class="film-frame"
+            data-frame="35"
+            onclick="loadFrame(35)"
+        >
+
+            035
+
+        </button>
+
+
+        <button
+            class="film-frame"
+            data-frame="36"
+            onclick="loadFrame(36)"
+        >
+
+            036
+
+        </button>
+
+
+        <button
+            class="film-frame selected"
+            data-frame="37"
+            onclick="loadFrame(37)"
+        >
+
+            037
+
+        </button>
+
+
+        <button
+            class="film-frame"
+            data-frame="38"
+            onclick="loadFrame(38)"
+        >
+
+            038
+
+        </button>
+
+
+        <button
+            class="film-frame"
+            data-frame="39"
+            onclick="loadFrame(39)"
+        >
+
+            039
+
+        </button>
+
+
+        <button
+            class="film-frame"
+            data-frame="40"
+            onclick="loadFrame(40)"
+        >
+
+            040
+
+        </button>
+
+
+        <button
+            class="film-frame"
+            data-frame="41"
+            onclick="loadFrame(41)"
+        >
+
+            041
+
+        </button>
+
+
+    </div>
+
+
+</aside>
+
+
+<!-- =====================================================
+     DOCUMENT VIEWER
+====================================================== -->
+
+<main class="microfiche-screen">
+
+
+    <!-- SCREEN HEADER -->
+
+    <div class="screen-header">
+
+
+        <span id="screenFrame">
+
+            FRAME 037
+
+        </span>
+
+
+        <span>
+
+            RU-ARCH-1978-04
+
+        </span>
+
+
+    </div>
+
+
+    <!-- SCAN AREA -->
+
+    <div class="scan-area">
+
+
+        <div class="scan-image">
+
+
+            <!-- DOCUMENT -->
+
+            <div class="scan-paper">
+
+
+                <div class="scan-heading">
+
+                    ST. ANASTASIA'S UNIVERSITY
+
+                </div>
+
+
+                <div class="scan-subheading">
+
+                    CAMPUS ADMINISTRATION
+
+                </div>
+
+
+                <div class="scan-rule"></div>
+
+
+                <h1 id="documentHeading">
+
+                    INTERNAL MEMORANDUM
+
+                </h1>
+
+
+                <p
+                    class="scan-date"
+                    id="documentDate"
+                >
+
+                    October 14, 1978
+
+                </p>
+
+
+                <div
+                    id="documentContent"
+                    class="document-content"
+                >
+
+                </div>
+
+
+                <div class="scan-signature">
+
+                    Office of the Chancellor
+
+                </div>
+
+
+                <div class="scan-stamp">
+
+                    ARCHIVED
+
+                </div>
+
+
+            </div>
+
+
+            <!-- SCAN EFFECT -->
+
+            <div class="scan-lines"></div>
+
+            <div class="scan-noise"></div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- SCREEN FOOTER -->
+
+    <div class="screen-footer">
+
+
+        <span id="footerFrame">
+
+            FRAME 037
+
+        </span>
+
+
+        <span>
+
+            ORIGINAL MICROFORM
+
+        </span>
+
+
+        <span>
+
+            MAGNIFICATION 100%
+
+        </span>
+
+
+    </div>
+
+
+</main>
+
+
+<!-- =====================================================
+     INFORMATION PANEL
+====================================================== -->
+
+<aside class="microfiche-info">
+
+
+    <div class="info-title">
+
+        DOCUMENT INFORMATION
+
+    </div>
+
+
+    <div class="info-section">
+
+
+        <strong>
+            Collection
+        </strong>
+
+        <span>
+            University Administrative Records
+        </span>
+
+
+        <strong>
+            Film Number
+        </strong>
+
+        <span>
+            RU-ARCH-1978-04
+        </span>
+
+
+        <strong>
+            Frame
+        </strong>
+
+        <span id="infoFrame">
+
+            037 / 112
+
+        </span>
+
+
+        <strong>
+            Date
+        </strong>
+
+        <span id="infoDate">
+
+            14 October 1978
+
+        </span>
+
+
+        <strong>
+            Classification
+        </strong>
+
+        <span
+            class="classified"
+            id="infoClassification"
+        >
+
+            CONFIDENTIAL
+
+        </span>
+
+
+    </div>
+
+
+    <div class="info-title">
+
+        ARCHIVE NOTES
+
+    </div>
+
+
+    <div class="archive-notes">
+
+        Document scanned from original
+        university microform.
+
+        <br><br>
+
+        Image quality may vary.
+
+        <br><br>
+
+        Some records in this collection
+        may be restricted.
+
+    </div>
+
+
+    <div class="info-title">
+
+        ACTIONS
+
+    </div>
+
+
+    <div class="archive-actions">
+
+
+        <button>
+            Print Frame
+        </button>
+
+
+        <button>
+            Save Image
+        </button>
+
+
+        <button>
+            View Metadata
+        </button>
+
+
+    </div>
+
+
+</aside>
+
+
+</div>
+
+
+<!-- =====================================================
+     MICROFICHE STATUS BAR
+====================================================== -->
+
+<div class="microfiche-status">
+
+
+    <span>
+        SYSTEM READY
+    </span>
+
+
+    <span>
+        FILM LOADED
+    </span>
+
+
+    <span id="statusFrame">
+        FRAME 037
+    </span>
+
+
+    <span>
+        IMAGE STABLE
+    </span>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+
+/* =====================================================
+   MICROFICHE FRAME DATA
+====================================================== */
+
+
+const frames = {
+
+
+    35: {
+
+        heading:
+            "CAMPUS NEWSLETTER",
+
+        date:
+            "October 1978",
+
+        infoDate:
+            "October 1978",
+
+        classification:
+            "PUBLIC",
+
+        content: [
+
+            "The university has announced the completion of the autumn research programme.",
+
+            "Students and faculty are reminded that all field equipment must be returned to the appropriate department following use.",
+
+            "The library will remain open until 10:00 PM during examination period."
+
+        ]
+
+    },
+
+
+    36: {
+
+        heading:
+            "FIELD RESEARCH NOTICE",
+
+        date:
+            "October 12, 1978",
+
+        infoDate:
+            "12 October 1978",
+
+        classification:
+            "PUBLIC",
+
+        content: [
+
+            "Field research teams are requested to submit all survey materials to the Department of Marine Biology.",
+
+            "Photographic materials should be catalogued before being transferred to the University Archives.",
+
+            "No unusual observations were reported."
+
+        ]
+
+    },
+
+
+    37: {
+
+        heading:
+            "INTERNAL MEMORANDUM",
+
+        date:
+            "October 14, 1978",
+
+        infoDate:
+            "14 October 1978",
+
+        classification:
+            "CONFIDENTIAL",
+
+        content: [
+
+            "Following the events recorded during the current coastal survey, all personnel are reminded that information concerning Observation Area █████ is not to be distributed outside the university.",
+
+            "Students should not be permitted access to the associated field records without written authorization.",
+
+            "Please ensure that all photographic material is returned to the Archives following review.",
+
+            "Under no circumstances should copies be made."
+
+        ]
+
+    },
+
+
+    38: {
+
+        heading:
+            "FIELD PHOTOGRAPH RECORD",
+
+        date:
+            "October 15, 1978",
+
+        infoDate:
+            "15 October 1978",
+
+        classification:
+            "RESTRICTED",
+
+        content: [
+
+            "PHOTOGRAPHIC PLATE: 38-B",
+
+            "LOCATION: WESTERN COASTAL OBSERVATION AREA",
+
+            "TIME: 03:17",
+
+            "WEATHER: HEAVY FOG",
+
+            "NOTE: Image quality insufficient for positive identification.",
+
+            "Further examination recommended."
+
+        ]
+
+    },
+
+
+    39: {
+
+        heading:
+            "SUPPLEMENTARY FIELD REPORT",
+
+        date:
+            "October 15, 1978",
+
+        infoDate:
+            "15 October 1978",
+
+        classification:
+            "CONFIDENTIAL",
+
+        content: [
+
+            "The object was observed again at approximately 03:17.",
+
+            "It appeared to remain stationary despite the movement of the surrounding water.",
+
+            "Personnel were instructed not to approach the observation area.",
+
+            "[REMAINDER OF REPORT REMOVED]"
+
+        ]
+
+    },
+
+
+    40: {
+
+        heading:
+            "ARCHIVE NOTICE",
+
+        date:
+            "October 16, 1978",
+
+        infoDate:
+            "16 October 1978",
+
+        classification:
+            "DAMAGED",
+
+        content: [
+
+            "DOCUMENT DAMAGED.",
+
+            "The original microform contains severe physical damage.",
+
+            "Portions of this frame cannot be recovered.",
+
+            "PLEASE CONSULT ARCHIVIST."
+
+        ]
+
+    },
+
+
+    41: {
+
+        heading:
+            "ADMINISTRATIVE NOTICE",
+
+        date:
+            "October 17, 1978",
+
+        infoDate:
+            "17 October 1978",
+
+        classification:
+            "PUBLIC",
+
+        content: [
+
+            "The coastal survey has been concluded.",
+
+            "All personnel are to return to campus immediately.",
+
+            "Further information will be distributed through departmental channels.",
+
+            "Thank you for your cooperation."
+
+        ]
+
+    }
+
+
+};
+
+
+/* =====================================================
+   AVAILABLE FRAMES
+====================================================== */
+
+
+const frameNumbers = [
+
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+
+];
+
+
+let currentFrame = 37;
+
+
+/* =====================================================
+   LOAD FRAME
+====================================================== */
+
+
+function loadFrame(frame) {
+
+
+    if (!frames[frame]) {
+
+        return;
+
+    }
+
+
+    currentFrame = frame;
+
+
+    const data = frames[frame];
+
+
+    /*
+       FRAME NUMBER
+    */
+
+    const formattedFrame =
+        String(frame).padStart(3, "0");
+
+
+    document.getElementById(
+        "frameNumber"
+    ).value = formattedFrame;
+
+
+    document.getElementById(
+        "screenFrame"
+    ).textContent =
+        "FRAME " + formattedFrame;
+
+
+    document.getElementById(
+        "footerFrame"
+    ).textContent =
+        "FRAME " + formattedFrame;
+
+
+    document.getElementById(
+        "statusFrame"
+    ).textContent =
+        "FRAME " + formattedFrame;
+
+
+    document.getElementById(
+        "infoFrame"
+    ).textContent =
+        formattedFrame + " / 112";
+
+
+    /*
+       DOCUMENT TITLE
+    */
+
+    document.getElementById(
+        "documentHeading"
+    ).textContent =
+        data.heading;
+
+
+    /*
+       DOCUMENT DATE
+    */
+
+    document.getElementById(
+        "documentDate"
+    ).textContent =
+        data.date;
+
+
+    document.getElementById(
+        "infoDate"
+    ).textContent =
+        data.infoDate;
+
+
+    /*
+       CLASSIFICATION
+    */
+
+    document.getElementById(
+        "infoClassification"
+    ).textContent =
+        data.classification;
+
+
+    /*
+       DOCUMENT CONTENT
+    */
+
+    const content =
+        document.getElementById(
+            "documentContent"
+        );
+
+
+    content.innerHTML = "";
+
+
+    data.content.forEach(
+        function(text) {
+
+
+            const paragraph =
+                document.createElement("p");
+
+
+            paragraph.textContent =
+                text;
+
+
+            content.appendChild(
+                paragraph
+            );
+
+
+        }
+    );
+
+
+    /*
+       CHANGE SELECTED FILM FRAME
+    */
+
+    document.querySelectorAll(
+        ".film-frame"
+    ).forEach(
+        function(button) {
+
+            button.classList.remove(
+                "selected"
+            );
+
+        }
+    );
+
+
+    const selected =
+        document.querySelector(
+            '.film-frame[data-frame="' +
+            frame +
+            '"]'
+        );
+
+
+    if (selected) {
+
+
+        selected.classList.add(
+            "selected"
+        );
+
+
+        selected.scrollIntoView({
+
+            behavior: "smooth",
+
+            block: "nearest"
+
+        });
+
+
+    }
+
+
+}
+
+
+/* =====================================================
+   NEXT FRAME
+====================================================== */
+
+
+function nextFrame() {
+
+
+    const index =
+        frameNumbers.indexOf(
+            currentFrame
+        );
+
+
+    if (
+        index <
+        frameNumbers.length - 1
+    ) {
+
+
+        loadFrame(
+            frameNumbers[index + 1]
+        );
+
+
+    }
+
+
+}
+
+
+/* =====================================================
+   PREVIOUS FRAME
+====================================================== */
+
+
+function previousFrame() {
+
+
+    const index =
+        frameNumbers.indexOf(
+            currentFrame
+        );
+
+
+    if (index > 0) {
+
+
+        loadFrame(
+            frameNumbers[index - 1]
+        );
+
+
+    }
+
+
+}
+
+
+/* =====================================================
+   KEYBOARD CONTROLS
+====================================================== */
+
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+
+        if (
+            event.key === "ArrowRight"
+        ) {
+
+
+            nextFrame();
+
+
+        }
+
+
+        if (
+            event.key === "ArrowLeft"
+        ) {
+
+
+            previousFrame();
+
+
+        }
+
+
+    }
+);
+
+
+/* =====================================================
+   INITIAL FRAME
+====================================================== */
+
+
+loadFrame(37);
+
+
+</script>
+
+<script src="./js/main.js"></script>
+<script src="./js/microfiche.js"></script>
+</body>
+</html>

@@ -1,0 +1,598 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#cfcfcf;
+  font-family:Tahoma, Verdana, Arial, sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:20px;
+}
+
+/* Desktop shell */
+.desktop{
+  width:1280px;
+  height:800px;
+  background:#efefef;
+  border:2px solid #666;
+  box-shadow:
+    0 0 0 2px #fff inset,
+    0 20px 50px rgba(0,0,0,.25);
+  overflow:hidden;
+}
+
+/* Browser window */
+.browser{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  background:#dfe3ea;
+}
+
+/* Tabs */
+.tabs{
+  height:54px;
+  display:flex;
+  align-items:flex-end;
+  padding-left:8px;
+  background:#d6dae2;
+  border-bottom:1px solid #888;
+}
+
+.tab{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#f4f4f4;
+  border:1px solid #666;
+  border-bottom:none;
+  padding:14px 16px;
+  margin-right:4px;
+  font-size:14px;
+  min-width:240px;
+}
+
+.tab.active{
+  background:#ffffff;
+}
+
+.tab .icon{
+  width:16px;
+  height:16px;
+  background:#ff6600;
+  border-radius:2px;
+}
+
+.tab .close{
+  margin-left:auto;
+  font-weight:bold;
+  color:#333;
+}
+
+.new-tab{
+  font-size:26px;
+  padding:8px 14px;
+  color:#333;
+}
+
+/* Toolbar */
+.toolbar{
+  height:38px;
+  background:#ececec;
+  border-bottom:1px solid #999;
+  display:flex;
+  align-items:center;
+  padding:0 10px;
+  gap:8px;
+}
+
+.navbtn{
+  width:24px;
+  height:24px;
+  border:1px solid #888;
+  background:#f7f7f7;
+}
+
+.addressbar{
+  flex:1;
+  height:26px;
+  border:1px solid #888;
+  background:#fff;
+  font-family:"Courier New", monospace;
+  font-size:13px;
+  color:#222;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  padding-left:10px;
+  padding-top:5px;
+}
+
+/* Page viewport */
+.viewport{
+  flex:1;
+  overflow:auto;
+  background:#d9d9d9;
+  padding:14px;
+}
+
+/* Forum page */
+.forum{
+  width:1120px;
+  margin:0 auto;
+  background:#fff;
+  border:1px solid #444;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+/*================================================
+
+    RAVENSWOOD UNIVERSITY
+    404 ERROR PAGE
+
+================================================*/
+
+
+/*====================================
+    PAGE
+=====================================*/
+
+.error-page{
+
+    width:100%;
+
+    min-height:100%;
+
+    background:#ffffff;
+
+    color:#222;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+}
+
+
+/*=====================================
+    MAIL HEADER
+======================================*/
+
+.mail-header{
+
+    height:75px;
+
+    background:
+
+        linear-gradient(
+            #f7f7f7,
+            #d8d8d8
+        );
+
+    border-bottom:0px solid #aaa;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:10px 22px;
+
+}
+
+
+.mail-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.mail-crest{
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#315d91;
+
+    color:white;
+
+    border:2px solid #24466e;
+
+    font-family:Georgia,serif;
+
+    font-weight:bold;
+
+}
+
+
+.mail-brand h1{
+
+    font-family:Georgia,serif;
+
+    font-size:21px;
+
+    font-weight:normal;
+
+    color:#333;
+
+}
+
+
+.mail-brand p{
+
+    color:#666;
+
+    font-size:11px;
+
+}
+
+
+.account-info{
+
+    text-align:right;
+
+    font-size:11px;
+
+}
+
+
+.account-info strong{
+
+    display:block;
+
+    color:#444;
+
+}
+
+
+.account-info span{
+
+    display:block;
+
+    color:#777;
+
+    margin:3px 0;
+
+}
+
+
+.account-info a{
+
+    color:#1b56a8;
+
+}
+
+
+/*====================================
+    MAIN ERROR CONTENT
+=====================================*/
+
+.error-content{
+
+    max-width:850px;
+
+    margin:50px auto 30px;
+
+    display:flex;
+
+    gap:30px;
+
+    padding:0 35px;
+    
+    height:293px;
+
+}
+
+
+.error-icon{
+
+    flex-shrink:0;
+
+    width:85px;
+
+}
+
+
+.broken-page{
+
+    width:65px;
+
+    height:78px;
+
+    border:2px solid #777;
+
+    background:#eee;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:32px;
+
+    color:#777;
+
+    position:relative;
+
+}
+
+
+.broken-page:after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-2px;
+
+    right:-2px;
+
+    width:18px;
+
+    height:18px;
+
+    background:white;
+
+    border-left:2px solid #777;
+
+    border-top:2px solid #777;
+
+}
+
+
+/*====================================
+    MESSAGE
+=====================================*/
+
+.error-message{
+
+    max-width:650px;
+
+}
+
+
+.error-message h1{
+
+    margin:0 0 20px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:25px;
+
+    font-weight:normal;
+
+    color:#333;
+
+}
+
+
+.error-message p{
+
+    margin:0 0 12px;
+
+    font-size:12px;
+
+    line-height:1.6;
+
+    color:#444;
+
+}
+
+
+.requested-url{
+
+    margin-top:25px;
+
+    padding:10px;
+
+    background:#f1f1f1;
+
+    border:1px solid #ccc;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:10px;
+
+    color:#555;
+
+}
+
+
+.requested-url span{
+
+    color:#222;
+
+}
+
+
+.error-code{
+
+    margin-top:12px;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size:10px;
+
+    color:#777;
+
+}
+
+
+/*====================================
+    LINKS
+=====================================*/
+
+.error-links{
+
+    max-width:850px;
+
+    margin:0 auto;
+
+    padding:20px 35px 30px;
+
+    border-top:1px solid #ccc;
+
+    font-size:11px;
+
+}
+
+
+.error-links strong{
+
+    font-size:11px;
+
+}
+
+
+.error-links ul{
+
+    margin-top:10px;
+
+    padding-left:25px;
+
+}
+
+
+.error-links li{
+
+    margin-bottom:7px;
+
+}
+
+
+.error-links a{
+
+    color:#003399;
+
+    text-decoration:underline;
+
+}
+
+
+.error-links a:hover{
+
+    color:#cc0000;
+
+}
+
+
+/*====================================
+    FOOTER
+=====================================*/
+
+.error-footer{
+
+    border-top:1px solid #aaa;
+
+    background:#eeeeee;
+
+    padding:12px 25px;
+
+    color:#666;
+
+    font-size:9px;
+
+    line-height:1.8;
+
+}
+
+
+.error-footer .copyright{
+
+    margin-top:5px;
+
+    color:#888;
+
+}
+
+
+/*====================================
+    OLD WEB DETAILS
+=====================================*/
+
+.error-page a{
+
+    cursor:pointer;
+
+}
+
+
+.error-page::selection{
+
+    background:#333;
+
+    color:#fff;
+
+}
+
+
+/*====================================
+    SMALLER WINDOWS
+=====================================*/
+
+@media(max-width:700px){
+
+    .error-content{
+
+        margin-top:30px;
+
+        padding:0 20px;
+
+        gap:20px;
+
+    }
+
+
+    .error-icon{
+
+        display:none;
+
+    }
+
+
+    .error-links{
+
+        padding-left:20px;
+
+        padding-right:20px;
+
+    }
+
+
+    .error-header{
+
+        padding-left:15px;
+
+    }
+
+}

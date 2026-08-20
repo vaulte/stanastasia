@@ -9,13 +9,13 @@ const issues = {
     march: {
 
         title:
-            "March 2002",
+            "October 2000",
 
         headline:
-            "Spring Term Begins",
+            "Fall Term Begins",
 
         description:
-            "The spring semester begins as students return to campus."
+            "The fall semester begins as students return to campus."
 
     },
 
@@ -23,7 +23,7 @@ const issues = {
     april: {
 
         title:
-            "April 2002",
+            "September 2000",
 
         headline:
             "New Research Initiative",
@@ -37,7 +37,7 @@ const issues = {
     may: {
 
         title:
-            "May 2002",
+            "August 2000",
 
         headline:
             "University Announces Awards",
@@ -51,7 +51,7 @@ const issues = {
     june: {
 
         title:
-            "June 2002",
+            "July 2000",
 
         headline:
             "Summer Field Work",
